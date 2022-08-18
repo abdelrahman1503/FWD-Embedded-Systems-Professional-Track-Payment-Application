@@ -5,8 +5,7 @@
 
 void appStart(void)
 {
-	while (1)
-	{
+	
 		ST_cardData_t cardData;
 		ST_terminalData_t termData;
 		ST_transaction_t transData;
@@ -70,5 +69,5 @@ void appStart(void)
 		return 0;
 		
 
-	}
+	
 }
