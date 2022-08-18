@@ -19,9 +19,9 @@ EN_serverError_t isValidAccount(ST_cardData_t* cardData)
 		{
 			return Ok;
 		}
-		
-		
-					
+
+
+
 	}
 	return DECLINED_STOLEN_CARD;
 }
@@ -58,7 +58,6 @@ EN_transState_t recieveTransactionData(ST_transaction_t* transData)
 		validAccounts[counter].balance = validAccounts[counter].balance - transData->terminalData.transAmount;
 		saveTransaction(&transData);
 		printf("Successful Transaction\n");
-		validAccounts[counter].balance -= transData->terminalData.transAmount;
 	}
 }
 
@@ -73,7 +72,7 @@ EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transacti
 	{
 		if (transactionSequenceNumber == transactionData[i].transactionSequenceNumber)
 		{
-	
+
 			return Ok;
 		}
 	}
